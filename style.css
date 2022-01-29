@@ -1,0 +1,8 @@
+body {
+    color: grey;
+    text-align: center;
+    background-image: url('istockphoto-162515751-612x612.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

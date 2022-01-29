@@ -1,0 +1,41 @@
+/* add your CSS here */
+.container {
+    text-align: center;
+    border: solid thin grey;
+    box-shadow: 10px 5px 5px black;
+}
+
+.catfish-info {
+    border: solid thin grey;
+}
+
+p span {
+    font-style: italic;
+    padding: 15px;
+}
+
+img {
+    width: 300px;
+    padding: 15px;
+    border: solid thin white;
+    text-align: left;
+    border-radius: 10%;
+}
+
+h3 {
+    padding: 15px;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 15px;
+}
+
+li span{
+   font-weight: bold;
+}
+
+.catfish-info p {
+    padding: 15px;
+}
