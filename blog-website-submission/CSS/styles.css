@@ -6,24 +6,46 @@
     "hd hd hd hd hd hd hd hd"
     "sd sd sd main main main main main"
     "ft ft ft ft ft ft ft ft";
-    border: 2px solid lightblue;
+    grid-gap: 10px;
+    padding: 25px;
+    margin: 20px;
 }
 
 .box {
+    box-shadow: 5px 5px grey;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
     width: 100%;
-    border: 1px solid black;
+    border: 2px solid grey;
     background: white;
 }
 
 .header {
+    display: grid;
+    background-image: url(../Images/moonimg2.jpg), url(../Images/moonimg3.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+    background-size: contain;
     grid-area: hd;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .sidebar {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
     grid-area: sd;
+}
+
+.blogs {
+    box-shadow: 5px 5px grey;
+    padding: 10px;
+    margin: 10px;
 }
 
 .image {
