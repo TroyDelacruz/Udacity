@@ -1,0 +1,52 @@
+body {
+    font-family: 'Comforter', cursive, monospace;
+    background-image: url(../Images/starryimg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 600px;
+    grid-template-areas: 
+    "hd hd hd hd"
+    "sd sd sd main"
+    "ft ft ft ft";
+    padding: 25px;
+    margin: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.header {
+    display: grid;
+    grid-area: hd;
+}
+
+.sidebar {
+    display: grid;
+    grid-area: sd;
+}
+
+.content {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: ft;
+}
