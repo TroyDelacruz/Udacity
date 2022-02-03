@@ -6,21 +6,14 @@ body {
     color: white;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .container {
     display: grid;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 250px 600px;
     grid-template-areas: 
-    "hd hd hd hd"
-    "sd sd sd main"
-    "ft ft ft ft";
+    "hd hd hd hd hd"
+    "sd sd main main main"
+    "ft ft ft ft ft";
     padding: 25px;
     margin: 20px;
 }
@@ -28,19 +21,33 @@ body {
 .box {
     display: flex;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
 }
-
 
 .header {
     display: grid;
     grid-area: hd;
 }
 
+h1 {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 10px;
+}
+
 .sidebar {
     display: grid;
     grid-area: sd;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
 }
 
 .content {
