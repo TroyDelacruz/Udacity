@@ -32,15 +32,31 @@ body {
 
 h1 {
     text-align: center;
-    margin-left: 30px;
+}
+
+.navbar {
+    overflow: hidden;
+    list-style: none;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-gap: 10px;
+    float: left;
+    display: block;
+    color: white;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: lightseagreen;
+}
+
+input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
 }
 
 .sidebar {
