@@ -71,6 +71,11 @@ ul {
     grid-area: main;
 }
 
+.para-text {
+    display: flex;
+    float: left;
+}
+
 .footer {
     grid-area: ft;
 }
