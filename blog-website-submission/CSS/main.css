@@ -1,8 +1,8 @@
+@import url(../CSS/styles.css);
+
 @import url(../CSS/navbar.css);
 
 @import url(../CSS/blog.css);
-
-@import url(//CSS/styles.css);
 
 body {
     font-family: 'Comforter', cursive, monospace;
