@@ -1,0 +1,23 @@
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    overflow: hidden;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links-2 li {
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: lightseagreen;
+}

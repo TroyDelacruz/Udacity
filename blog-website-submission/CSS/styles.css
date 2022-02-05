@@ -1,44 +1,5 @@
-body {
-    font-family: 'Comforter', cursive, monospace;
-    background-image: url(../Images/starryimg1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
-    grid-template-areas: 
-    "hd hd hd hd hd"
-    "sd sd main main main"
-    "ft ft ft ft ft";
-    padding: 25px;
-    margin: 20px;
-}
-
-.box {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    width: 100%;
-    background: black;
-}
-
 .header {
     display: grid;
-    background-image: url(../Images/moonimg2.jpg), url(../Images/moonimg3.jpg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: left top, right top;
-    background-size: contain;
     grid-area: hd;
 }
 
@@ -64,10 +25,7 @@ ul {
     margin: 10px;
 }
 
-.image {
-    background-image: url(../Images/moonimg1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.content {
     grid-area: main;
 }
 
