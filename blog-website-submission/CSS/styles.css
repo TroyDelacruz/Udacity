@@ -71,11 +71,7 @@ ul {
     grid-area: main;
 }
 
-.para-text {
-    display: flex;
-    float: left;
-}
-
 .footer {
+    display: grid;
     grid-area: ft;
 }
