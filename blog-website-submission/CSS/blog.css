@@ -1,24 +1,19 @@
-h1 {
-    margin-left: 30px;
-    text-decoration: underline;
+header {
+    display: grid;
+    grid-area: hd;
+    justify-content: center;
 }
 
-input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+.sidebar {
+    display: grid;
+    grid-area: sd;
+    justify-content: flex-start;
 }
 
 .content {
-    display: grid;
     grid-area: main;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
 }
 
-.footer {
+footer {
     grid-area: ft;
 }
