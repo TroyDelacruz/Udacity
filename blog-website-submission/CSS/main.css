@@ -4,11 +4,17 @@
 
 @import url(../CSS/blog.css);
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Comforter', cursive, monospace;
     background-image: url(../Images/moonimg4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
     color: white;
 }
 
@@ -22,5 +28,28 @@ body {
     "ft ft ft ft";
     grid-gap: 10px;
     height: calc(100vh - 10px);
+    }
+
+@media screen and (max-width: 300px) {
+    .container {
+         width: 25%;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
