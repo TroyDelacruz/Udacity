@@ -23,3 +23,7 @@ input[type=text] {
     background-size: cover;
     color: lightblue;
 }
+
+.section a {
+    color: blue;
+}

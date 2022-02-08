@@ -9,6 +9,10 @@
     display: inline;
 }
 
+.nav-links a {
+    color: white;
+}
+
 .nav-links-2 li {
     list-style: none;
 }
