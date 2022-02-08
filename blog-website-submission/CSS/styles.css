@@ -15,3 +15,11 @@ input[type=text] {
     margin-right: 16px;
     font-size: 17px;
 }
+
+.section {
+    box-shadow: 5px 5px grey;
+    background-image: url(../Images/stripes.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: lightblue;
+}

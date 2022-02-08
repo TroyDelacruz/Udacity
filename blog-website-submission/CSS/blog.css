@@ -7,7 +7,7 @@ header {
 .sidebar {
     display: grid;
     grid-area: sd;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .content {
