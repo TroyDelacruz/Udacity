@@ -14,6 +14,6 @@ header {
     grid-area: main;
 }
 
-footer {
+.footer {
     grid-area: ft;
 }
