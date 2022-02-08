@@ -13,6 +13,10 @@
     list-style: none;
 }
 
+.nav-links-2 a {
+    color: white;
+}
+
 .nav-links a:hover {
     color: lightseagreen;
 }
