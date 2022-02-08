@@ -18,10 +18,10 @@ input[type=text] {
 
 .section {
     box-shadow: 5px 5px grey;
-    background-image: url(../Images/stripes.webp);
+    background-image: url(../Images/polkadot1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: lightblue;
+    color: black;
 }
 
 .section a {
