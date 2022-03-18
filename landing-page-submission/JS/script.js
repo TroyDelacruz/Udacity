@@ -26,3 +26,28 @@ function createListItem () {
         menu.appendChild(listItem);
     }
 };
+
+// Will show if section is in viewport
+
+function sectionInViewPort (elem) {
+    let sectionPos = elem.getBoundingClientRect();
+    return (sectionPos >= 0)
+};
+
+function toggleActiveClass() {
+    for (section of sections) {
+        
+        //If the section is in the viewport
+        if (sectionInViewPort(section)) {
+            //Check if it doesn't already have "your-active-class"
+            if (!section.classList.contains('your-active-class')) {
+                //Add it
+                section.classList.add('your-active-class');
+            }
+        } else { //Out of viewport? Remove your-active-class
+            section.classList.remove('your-active-class');
+        }
+    }
+};
+
+/*Completed helper functions */
