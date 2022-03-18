@@ -51,3 +51,12 @@ function toggleActiveClass() {
 };
 
 /*Completed helper functions */
+
+
+// Build the nav
+
+createListItem();
+
+// Add class 'active' to section when close to top of viewport
+
+document.addEventListener('scroll', toggleActiveClass);
