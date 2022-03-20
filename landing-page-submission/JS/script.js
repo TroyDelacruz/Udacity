@@ -1,21 +1,56 @@
-/* Defining global variable(s) */
+/* Declaring global variables */
 
-const navSections = querySelectorAll("section");
+const sections = document.querySelectorAll("section");
+const navList = document.getElementById("navbar__list");
 
-/* Starting the beginning functions */
+/* Helper Functions */
 
-function createNavHTML(id, name) {
-  const navHTML = `<a class ="menu__link" data-id="${id}>${name}</a>`;
-  return navHTML;
+function ifInViewport() {
+  return ifInViewport.top >= 0;
 }
 
-function inViewport(elem) {
-  const bound = elem.getBoundingClientRect();
-  return bound.top >= 0;
+/* Main Functions */
+
+// Add Class active when near top of viewport
+
+function setActiveClass() {
+  for (let i = 0; i < navList.length; i++) {
+    if (ifInViewport(sectionList[i])) {
+      navList[i].classList.add("your-active-class");
+    } else {
+      navList[i].classList.remove("your-active-class");
+    }
+  }
 }
 
-/* Starting the functions that will build upon the previous */
+setActiveClass();
 
-// Building the navigation
+const scroll = () => {
+  const link = document.querySelectorAll(".navbar__menu a");
+  link.forEach((link) => {
+    link.addEventListener("click", () => {
+      for (i = 0; i < sections; i++) {
+        sections[i].addEventListener("click", sectionScroll(link));
+      }
+    });
+  });
+};
 
-function buildNav() {}
+scroll();
+
+// Building Nav
+
+function navBuild() {
+  let navUI = "";
+
+  sections.forEach((section) => {
+    const sectionID = section.id;
+    const sectionDataNav = section.dataset.nav;
+
+    navUI += `<a class ="menu__link" data-id="${sectionID}">${sectionDataNav}</a>`;
+  });
+
+  navList.innerHTML = navUI;
+}
+
+navBuild();
