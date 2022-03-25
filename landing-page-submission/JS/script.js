@@ -25,7 +25,7 @@ function setActiveClass() {
 
 setActiveClass();
 
-const scroll = () => {
+function scroll() {
   const link = document.querySelectorAll(".navbar__menu a");
   link.forEach((link) => {
     link.addEventListener("click", () => {
@@ -34,7 +34,7 @@ const scroll = () => {
       }
     });
   });
-};
+}
 
 scroll();
 
