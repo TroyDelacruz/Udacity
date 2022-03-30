@@ -1,32 +1,72 @@
-// Selecting global variables
-const navigation = document.getElementById('navbar__list');
-const sections = document.querySelectorAll('section');
-let navigationList = '';
+const navigationMenu = document.querySelector('#navbar__list');
+const navigationSections = document.querySelectorAll('section');
 
-/* Start Helper Functions */
+/**
+ * End Global Variables
+ * Start Helper Functions
+ * 
+*/
 
-function navItemHTML(id, name) {
-  const item = `<a class="menu__link" data-id="${id}">${name}</a>`
-  return item;
+// build the nav
+function buildNav() {
+    const fragment = document.createDocumentFragment();
+
+    navigationSections.forEach((navSection) => {
+        const liTag = document.createElement('li');
+        const aTag = document.createElement('a');
+        aTag.innerText = navSection.getAttribute('data-nav');
+        aTag.setAttribute('class', 'menu__link');
+
+        // scroll to anchor ID using scroll to event
+        aTag.addEventListener("click", () => {
+            navigationSection.scrollIntoView({behavior: "smooth"});
+            });
+        liTag.appendChild(aTag);
+        fragment.appendChild(liTag);
+    });
+    navMenu.appendChild(fragment);
 };
 
-function InViewport (elem) {
-  const bounding = elem.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
-};
+function getVisibleSectionIndex() {
+    let minor = window.innerHeight;
+    visibleSectionIndex = -1;
 
-/* function makeNavigation () {
-  sections.forEach((section) => {
-    navigationList += `<li> <a class="nav__link menu__link" href="#${section.id}" id="navli">
-          ${section.dataset.nav}</a></li>`;
-  });
-
-  navigation.innerHTML.navigationList
+    navSections.forEach((navSection, index) => {
+        let offset = navSection.getBoundingClientRect();
+        if(Math.abs(offset.top) < minor){
+            minor = Math.abs(offset.top);
+            visibleSectionIndex = index;
+        }
+    });
+    return visibleSectionIndex;
 }
 
-makeNavigation(); */
+function setActiveSection(){
+    visibleSectionIndex = getVisibleSectionIndex();
+
+    // If visibleSection exists
+    if(visibleSectionIndex != -1){
+        // create a list of tags from navigation menu
+        let navATagList = document.querySelectorAll('.menu__link');
+
+        // Loop through all section
+        for (let i = 0; i < navSections.length; i++) {
+            // For section in viewport: Add active state to the section and navigation
+            if (i == visibleSectionIndex){
+                navSections[i].classList.add('your-active-class');
+                navATagList[i].classList.add('your-active-class');
+            }
+            // For other sections: Remove active state from the section and navigation
+            else{
+                navSections[i].classList.remove('your-active-class');
+                navATagList[i].classList.remove('your-active-class');
+            }
+        }; 
+    };
+}
+
+// Build navigation menu
+buildNav();
+
+// Set sections as active (highlight section and nav if section is in viewport)
+document.addEventListener('scroll', setActiveSection);
