@@ -24,14 +24,14 @@ function buildNav() {
         liTag.appendChild(aTag);
         fragment.appendChild(liTag);
     });
-    navMenu.appendChild(fragment);
+    navigationMenu.appendChild(fragment);
 };
 
 function getVisibleSectionIndex() {
     let minor = window.innerHeight;
     visibleSectionIndex = -1;
 
-    navSections.forEach((navSection, index) => {
+    navigationSections.forEach((navSection, index) => {
         let offset = navSection.getBoundingClientRect();
         if(Math.abs(offset.top) < minor){
             minor = Math.abs(offset.top);
@@ -58,7 +58,7 @@ function setActiveSection(){
             }
             // For other sections: Remove active state from the section and navigation
             else{
-                navSections[i].classList.remove('your-active-class');
+                navigationSections[i].classList.remove('your-active-class');
                 navATagList[i].classList.remove('your-active-class');
             }
         }; 
