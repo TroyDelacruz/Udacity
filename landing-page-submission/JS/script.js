@@ -1,56 +1,18 @@
-/* Declaring global variables */
+// Selecting global variables
+const navigation = document.getElementById('navbar__list')
+const sections = document.querySelectorAll('section')
+let navigationList = '';
+/* Start Helper Functions */
 
-const sections = document.querySelectorAll("section");
-const navList = document.getElementById("navbar__list");
+// Create navigation bar by selecting the sections
 
-/* Helper Functions */
-
-function ifInViewport() {
-  return ifInViewport.top >= 0;
-}
-
-/* Main Functions */
-
-// Add Class active when near top of viewport
-
-function setActiveClass() {
-  for (let i = 0; i < navList.length; i++) {
-    if (ifInViewport(sectionList[i])) {
-      navList[i].classList.add("your-active-class");
-    } else {
-      navList[i].classList.remove("your-active-class");
-    }
-  }
-}
-
-setActiveClass();
-
-function scroll() {
-  const link = document.querySelectorAll(".navbar__menu a");
-  link.forEach((link) => {
-    link.addEventListener("click", () => {
-      for (i = 0; i < sections; i++) {
-        sections[i].addEventListener("click", sectionScroll(link));
-      }
-    });
-  });
-}
-
-scroll();
-
-// Building Nav
-
-function navBuild() {
-  let navUI = "";
-
+function makeNavigation () {
   sections.forEach((section) => {
-    const sectionID = section.id;
-    const sectionDataNav = section.dataset.nav;
-
-    navUI += `<a class ="menu__link" data-id="${sectionID}">${sectionDataNav}</a>`;
+    navigationList += `<li> <a class="nav__link menu__link" href="#${section.id}" id="navli">
+          ${section.dataset.nav}</a></li>`;
   });
 
-  navList.innerHTML = navUI;
+  navigation.innerHTML.navigationList
 }
 
-navBuild();
+makeNavigation();
